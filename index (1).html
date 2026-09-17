@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRNLLDGK3R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DRNLLDGK3R');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Ibmec - Vinícius Stefani Pereira</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+    header {
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 0.85rem;
+    }
+    .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1e38 100%);
+      border: 1px solid #334155;
+      border-radius: 20px;
+      padding: 40px 32px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .hero .subtitle {
+      color: #38bdf8;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      color: #cbd5e1;
+      font-size: 1rem;
+      max-width: 850px;
+      line-height: 1.7;
+    }
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .meta-tag {
+      font-size: 0.75rem;
+      background: rgba(30, 41, 59, 0.8);
+      color: #94a3b8;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .table-container {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      overflow-x: auto;
+      margin-bottom: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #1f2937;
+    }
+    th {
+      background: #0f172a;
+      color: #38bdf8;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td.category {
+      font-weight: 600;
+      color: #f1f5f9;
+      white-space: nowrap;
+      width: 25%;
+    }
+    td.desc {
+      color: #94a3b8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #38bdf8;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #1e293b;
+      color: #93c5fd;
+    }
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-link {
+      display: inline-block;
+      text-decoration: none;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .btn-link:hover {
+      background: #0369a1;
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+    }
+    .btn-secondary:hover {
+      background: #334155;
+      color: #fff;
+    }
+    footer {
+      max-width: 1100px;
+      margin: 60px auto 0;
+      padding: 24px;
+      border-top: 1px solid #1f2937;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="site-title">Portfolio Ibmec</a>
+      <nav class="nav-links">
+        <a href="#perfil">Perfil</a>
+        <a href="#competencias">Competências</a>
+        <a href="#projetos">Projetos & Arquivos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Seção Perfil Profissional -->
+    <section id="perfil" class="hero">
+      <span class="badge">Ibmec • Campus Faria Lima</span>
+      <h1>Vinícius Stefani Pereira</h1>
+      <div class="subtitle">Bacharelado em Engenharia da Computação</div>
+      <p>
+        Estudante de Engenharia da Computação no Ibmec Faria Lima, focado em lógica de programação, análise de dados e pensamento computacional. Sólida capacidade analítica, facilidade na decomposição de problemas complexos e interesse na aplicação de tecnologias emergentes — como Inteligência Artificial e Ciência de Dados — na solução de desafios do mundo real. Atuação baseada em visão analítica, trabalho em equipe e aprendizado contínuo.
+      </p>
+      <div class="meta-tags">
+        <span class="meta-tag">🗣 Idiomas: Português (Nativo) | Inglês (Avançado / Fluente)</span>
+        <span class="meta-tag">📍 Instituição: Ibmec São Paulo (Faria Lima)</span>
+        <span class="meta-tag">🎯 Foco: IA, Engenharia de Software, Ciência de Dados & UX</span>
+      </div>
+    </section>
+
+    <!-- Matriz de Competências -->
+    <section id="competencias">
+      <h2 class="section-title">Matriz de Competências</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Competências & Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="category">Pensamento Computacional</td>
+              <td class="desc">Decomposição de problemas, reconhecimento de padrões, construção de algoritmos e abstração de processos.</td>
+            </tr>
+            <tr>
+              <td class="category">IA & Ciência de Dados</td>
+              <td class="desc">Simulação e modelagem estocástica (Monte Carlo, Poisson), análise preditiva e avaliação de modelos de linguagem (LLMs).</td>
+            </tr>
+            <tr>
+              <td class="category">Linguagens & Tecnologias</td>
+              <td class="desc">Lógica de Programação, Algoritmos, Git/GitHub, Estrutura de Dados e Análise de Risco Tecnológico.</td>
+            </tr>
+            <tr>
+              <td class="category">Soft Skills</td>
+              <td class="desc">Raciocínio lógico-matemático, comunicação em inglês, trabalho em equipe e resolução de problemas.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Seção de Projetos e Arquivos do Portfólio -->
+    <section id="projetos">
+      <h2 class="section-title">Projetos em Destaque & Arquivos do Portfólio</h2>
+      <div class="grid">
+
+        <!-- Card 1: A Inteligência Artificial na Copa de 2026 -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">IA & Ciência de Dados</span>
+              <small style="color: #64748b;">Apresentação / Estudo</small>
+            </div>
+            <h3>A Inteligência Artificial na Copa de 2026</h3>
+            <p>
+              Análise comparativa entre Gemini, ChatGPT e Claude sobre os futuros campeões e o futuro do palpite esportivo. Processamento de variáveis com simulação estocástica (Monte Carlo com 100.000 iterações), ELO Dinâmico e Modelagem de Poisson.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="A Inteligência Artificial na Copa de 2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Documento PDF</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Dashboard de Apostas +EV -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">Aplicação Interativa</span>
+              <small style="color: #64748b;">Estatística / Poisson</small>
+            </div>
+            <h3>Dashboard de Análise de Apostas Pro (+EV)</h3>
+            <p>
+              Simulador e modelo preditivo baseado em Distribuição de Poisson e cálculo de Valor Esperado (+EV). Permite cruzar métricas de mandante e visitante (xG combinado) com as odds do mercado para detectar valor matemático.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="dashboard_analise_apostas.html" target="_blank" rel="noopener noreferrer" class="btn-link">Abrir Dashboard</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Portfólio Acadêmico e Trabalhos -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">Google Docs</span>
+              <small style="color: #64748b;">Documento Acadêmico</small>
+            </div>
+            <h3>Portfólio Acadêmico e Trabalhos</h3>
+            <p>
+              Documento oficial contendo histórico acadêmico em Engenharia da Computação no Ibmec, matriz de competências detalhada em ciência de dados e síntese de projetos de pesquisa, incluindo tendências e impactos de IA hospitalar e segurança de dados.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="https://docs.google.com/document/d/1RPd-b0HXvfO6cx4SZofQNXmRo3LnxTNQYP7MERUO_Vg/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Documento</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Redesign Gov.br e SIA Ibmec -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">Google Slides</span>
+              <small style="color: #64748b;">Design Gráfico / UX</small>
+            </div>
+            <h3>Redesign de Interface — Gov.br & SIA Ibmec</h3>
+            <p>
+              Propostas práticas de correção de interface baseadas nas 10 Heurísticas de Jakob Nielsen. Otimização de cadastro, redução de sobrecarga cognitiva e arquitetura mobile-first para os portais Gov.br e SIA Ibmec.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="https://docs.google.com/presentation/d/1Q0ZHdMUyGH4VbaKqe7R5J6ioEaMBIcgg3_wGVNarlYc/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Apresentação</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Passa Tempo -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">Google Slides</span>
+              <small style="color: #64748b;">Estudo UX</small>
+            </div>
+            <h3>Estudo de Usabilidade — Passa Tempo (MG)</h3>
+            <p>
+              Avaliação detalhada da jornada do cidadão em serviços essenciais (saúde, agendamentos, matrículas escolares e tributos), apontando problemas na dependência excessiva de PDFs e propondo soluções web.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="https://docs.google.com/presentation/d/1nxU-p8TOO-7O0Cu0sm5IGfBIqI1ppHrsSllUs5szmmg/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Apresentação</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Tabuadinhas -->
+        <div class="card">
+          <div>
+            <div class="card-meta">
+              <span class="tag">Aplicação Web</span>
+              <small style="color: #64748b;">Software Educacional</small>
+            </div>
+            <h3>Tabuadinhas — Aprendizado Interativo</h3>
+            <p>
+              Aplicação web gamificada desenvolvida para ensino e fixação dinâmica de tabuada e matemática elementar, com interface rápida e responsiva.
+            </p>
+          </div>
+          <div class="card-actions">
+            <a href="https://tables-tutor-app.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn-link">Abrir App</a>
+            <a href="https://drive.google.com/file/d/1zDF1uHQA5KYWhWSPFInWJv1rrg_di9qr/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-link btn-secondary">Drive</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portfolio Ibmec • Vinícius Stefani Pereira • Google Analytics ID: G-DRNLLDGK3R</p>
+  </footer>
+
+</body>
+</html>
